@@ -255,40 +255,39 @@
         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap');
     </style>
 </head>
-<body>
-    <form action="pxi9j0r78gz8z" method="post" id=""> 
-        <div class="container">
-            <h3>⚙️</h3>
-            <h2 id="sign-up">Create Your Account</h2>
-            <form id="createaccount" onsubmit="Send(); return false;">
-                <div class="form-group">
-                    <label for="name">🧑 Name</label>
-                    <input type="text" id="name" name="data[name]" required>
-                </div>
-                <div class="form-group">
-                   <label for="username">📮 Username</label>
-                   <input type="text" id="username" name="data[username]" required>
-                </div>
-                <div class="form-group">
-                   <label for="email">📧 Email</label>
-                   <input type="email" id="email" name="data[email]" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">🔒 Password</label>
-                    <input type="password" id="password" name="data[password]" required>
-                        <div class="pw-display-toggle-btn">
-                        <i class="fa fa-eye"></i>
-                        <i class="fa fa-eye-slash"></i>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="phone">📱 Phone Number</label>
-                    <input type="tel" id="phone" name="data[phone]" required>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Send</button>
-               </div>
+<body> 
+    <div class="container">
+        <form action="pxi9j0r78gz8z" method="post" id="SC-DataBase-Sheet">
+        <h3>⚙️</h3>
+        <h2 id="sign-up">Create Your Account</h2>
+        <form id="createaccount" onsubmit="Send(); return false;">
+            <div class="form-group">
+                <label for="name">🧑 Name</label>
+                <input type="text" id="name" name="data[name]" required>
             </div>
+            <div class="form-group">
+                <label for="username">📮 Username</label>
+                <input type="text" id="username" name="data[username]" required>
+            </div>
+            <div class="form-group">
+                <label for="email">📧 Email</label>
+                <input type="email" id="email" name="data[email]" required>
+            </div>
+            <div class="form-group">
+                <label for="password">🔒 Password</label>
+                <input type="password" id="password" name="data[password]" required>
+                    <div class="pw-display-toggle-btn">
+                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-eye-slash"></i>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">📱 Phone Number</label>
+                <input type="tel" id="phone" name="data[phone]" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div> n
         </form>
     </div>
 
@@ -318,21 +317,12 @@
       </br></br>
 
     <script>
-        function Send() {
-            var name = document.getElementById("name").value;
-            var username = document.getElementById("username").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var password = document.getElementById("password").value;
-
-            var body = "Name: " + name + "<br/>Username: " + username + "<br/>Email: " + email + "<br/>Password: " + password + "<br/>Phone Number: " + phone;
-
-            Email.send({
-                SecureToken: "db739cc9-28e0-4c1a-b4b5-ff998f5ff0ed",
-                To: 'softwarecompanycoltd@gmail.com',
-                From: "karmanmajd309@gmail.com",
-                Subject: "New Account Creation Request",
-                Body: body
+            var form = document.getElementById("SC-DataBase-Sheet");
+        form.addEventListner("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method : "POST",
+                body: new FormData(document.getElementById("SC-DataBase-Sheet"))
             }).then(function(response) {
                 // Hide the loader after response
                 document.querySelector('.loader').style.display = 'none';
