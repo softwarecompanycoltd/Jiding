@@ -256,44 +256,38 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h3>⚙️</h3>
-        <h2 id="sign-up">Create Your Account</h2>
-        <form id="createaccount" onsubmit="Send(); return false;">
-            <div class="form-group">
-                <label for="name">🧑 Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="username">📮 Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">📧 Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">🔒 Password</label>
-                <input type="password" id="password" name="password" required>
-                <div class="pw-display-toggle-btn">
-                    <i class="fa fa-eye"></i>
-                    <i class="fa fa-eye-slash"></i>
+    <form action="pxi9j0r78gz8z" method="post" id=""> 
+        <div class="container">
+            <h3>⚙️</h3>
+            <h2 id="sign-up">Create Your Account</h2>
+            <form id="createaccount" onsubmit="Send(); return false;">
+                <div class="form-group">
+                    <label for="name">🧑 Name</label>
+                    <input type="text" id="name" name="data[name]" required>
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="phone">📱 Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group terms">
-                <input type="checkbox" id="terms" name="terms" required>
-                <label for="terms">I've read and accept the <a href="https://drive.google.com/file/d/1dIG8jySsgNrBW1jhaPKJ59wBPWGTAW8x/view?usp=drive_link">Terms and Policies</a></label>
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="robotCheck" name="robotCheck" required>
-                <label for="robotCheck">I'm not a robot</label>
-            </div>
-            <div class="form-group">
-                <button type="submit">Send</button>
+                <div class="form-group">
+                   <label for="username">📮 Username</label>
+                   <input type="text" id="username" name="data[username]" required>
+                </div>
+                <div class="form-group">
+                   <label for="email">📧 Email</label>
+                   <input type="email" id="email" name="data[email]" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">🔒 Password</label>
+                    <input type="password" id="password" name="data[password]" required>
+                        <div class="pw-display-toggle-btn">
+                        <i class="fa fa-eye"></i>
+                        <i class="fa fa-eye-slash"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">📱 Phone Number</label>
+                    <input type="tel" id="phone" name="data[phone]" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send</button>
+               </div>
             </div>
         </form>
     </div>
