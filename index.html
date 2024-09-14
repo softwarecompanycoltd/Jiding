@@ -323,15 +323,15 @@
             fetch(form.action, {
                 method : "POST",
                 body: new FormData(document.getElementById("SC-DataBase-Sheet"))
-            }).then(function(response) {
+            }).then(
                 // Hide the loader after response
                 document.querySelector('.loader').style.display = 'none';
-
-                if (response === 'OK') {
+                response(
+                        const (response === 'OK') {
                     swal("Successful", "Your Data Was Successfully Received", "success");
-                } else {
-                    swal("Something Went Wrong", "Your Data Was Not Received", "error");
                 }
+            ).then((html) => {
+               window.open('https://softwarecompanycoltd.github.io/webings/', '_blank');
             });
         }
 
